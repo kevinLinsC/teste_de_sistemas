@@ -37,7 +37,7 @@ const CadastroForm = (props) => {
                             required: "O nome é obrigatório.",
                             minLength: {value: 2, message: "O nome deve conter no mínimo 2 caracteres."},
                             maxLength: {value: 30, message: "O nome deve conter no máximo 30 caracteres."},
-                            pattern: {value: /^[A-Za-z]+$/i, message: "O nome deve conter somente letras."}
+                            pattern: {value: /^[A-Za-zãõâôíìêüÃÕÂÔÍÌÊÜ ]+$/i, message: "O nome deve conter somente letras."}
                         })}
                     />
                     {errors.nome && <p className={styles.error}>{errors.nome.message}</p>}
@@ -66,7 +66,7 @@ const CadastroForm = (props) => {
                             required: "A senha é obrigatória.",
                             minLength: {value: 8, message: "A senha deve conter pelo menos 8 caracteres."},
                             maxLength: {value: 25, message: "A senha deve conter no máximo 25 caracteres."},
-                            pattern: {value: /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/, message: "A senha deve conter pelo menos uma letra maiúscula, uma minúscula, um número e um caractere especial"}
+                            pattern: {value: /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%#*?&])[A-Za-z\d@$!#%*?&]{8,}$/, message: "A senha deve conter pelo menos uma letra maiúscula, uma minúscula, um número e um caractere especial"}
                         })}
                     />
                     {errors.senha && <p className={styles.error}>{errors.senha.message}</p>}
